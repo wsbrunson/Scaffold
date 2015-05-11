@@ -1,6 +1,6 @@
 /* Install Command
 
-npm install --save-dev gulp-concat gulp-uglify gulp-ruby-sass gulp-jshint jshint-stylish gulp-scss-lint del gulp-shell gulp-filter
+npm install --save-dev gulp-concat gulp-uglify gulp-sass gulp-jshint jshint-stylish gulp-scss-lint del gulp-shell gulp-filter
 
 */
 
