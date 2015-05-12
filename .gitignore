@@ -1,0 +1,9 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+/node_modules/
+/.c9/
+/build/
+/build/*.*
+.DS_Store
+/lib/.DS_Store
+/lib/fonts/.DS_Store

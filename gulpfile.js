@@ -1,6 +1,7 @@
 /* Install Command
 
-npm install --save-dev gulp-concat gulp-uglify gulp-sass gulp-jshint jshint-stylish gulp-scss-lint del gulp-shell gulp-filter
+npm install --save-dev gulp-concat gulp-uglify gulp-sass gulp-jshint jshint-stylish gulp-scss-lint del gulp-shell
+sudo gem install scss-lint
 
 */
 
@@ -9,7 +10,6 @@ var scsslint = require('gulp-scss-lint'),
     concat   = require('gulp-concat'),
     uglify   = require('gulp-uglify'),
     jshint   = require('gulp-jshint'),
-    filter   = require('gulp-filter'),
     shell    = require('gulp-shell'),
     gulp     = require('gulp'),
     sass     = require('gulp-sass'),
@@ -22,7 +22,7 @@ var source = {
     fonts:     'lib/fonts/*.*',
     root:      'src/',
     html:      'index.html',
-    scss:      'src/scss/**/*.scss',
+    scss:      'src/scss/*.scss',
     libs:      'src/js/vendor/*.js',
     js:        'src/js/main.js'
 };
@@ -90,10 +90,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scss-lint', function() {
-    var scssFilter = filter(source.scssReset);
-    
     gulp.src(source.scss)
-        .pipe(scssFilter)
         .pipe(scsslint({'config': 'lint.yml'}));
 });
 
